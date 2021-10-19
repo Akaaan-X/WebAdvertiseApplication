@@ -58,11 +58,11 @@ namespace WebAdvertiseApplication
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "446563297891-6ul521mhsoet7p6okilnq5h1pmpmp5io.apps.googleusercontent.com",
+                ClientSecret = "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"
+            });
         }
     }
 }
