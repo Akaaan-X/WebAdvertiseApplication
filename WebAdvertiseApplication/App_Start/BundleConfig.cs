@@ -9,7 +9,7 @@ namespace WebAdvertiseApplication
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-3.6.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -25,6 +25,19 @@ namespace WebAdvertiseApplication
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //calendar css file
+            bundles.Add(new StyleBundle("~/Content/fullcalendarcss").Include(
+                        "~/Content/theme/jquery-ui.css",
+                        "~/Content/fullcalendar.css"));
+
+            //calendar script file
+            bundles.Add(new ScriptBundle("~/bundles/fullcalendar").Include(
+                        "~/Scripts/jquery-3.6.0.min.js",
+                        "~/Scripts/moment.min.js",
+                        "~/Scripts/fullcalendar/fullcalendar.js",
+                        "~/Scripts/calendar.js"
+                        ));
         }
     }
 }

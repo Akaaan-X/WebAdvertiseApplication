@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/fullcalendarcss")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
 
 
 </head>
@@ -32,6 +32,7 @@
                     {
                         <li>@Html.ActionLink("Consultant", "Index", "Consultants")</li>
                         <li>@Html.ActionLink("Client", "Index", "Clients")</li>
+                        <li>@Html.ActionLink("Appointment", "Index", "Events")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -48,6 +49,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/fullcalendar")
+    @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.js")
+    @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

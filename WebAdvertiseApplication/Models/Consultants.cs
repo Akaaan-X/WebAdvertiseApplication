@@ -24,5 +24,7 @@ namespace WebAdvertiseApplication.Models
                 .Property(e => e.gender)
                 .IsUnicode(false);
         }
+
+        public System.Data.Entity.DbSet<WebAdvertiseApplication.Models.Events> Events { get; set; }
     }
 }
