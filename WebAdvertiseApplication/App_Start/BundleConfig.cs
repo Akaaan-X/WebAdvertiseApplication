@@ -38,6 +38,9 @@ namespace WebAdvertiseApplication
                         "~/Scripts/fullcalendar/fullcalendar.js",
                         "~/Scripts/calendar.js"
                         ));
+            //jqeury ui
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include("~/Scripts/jquery-ui-{version}.js"));
+            bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include("~/Content/jquery-ui.css"));
         }
     }
 }

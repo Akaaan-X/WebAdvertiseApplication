@@ -27,7 +27,7 @@
                 @Html.DisplayNameFor(model => model.gender)
             </th>
             <th>
-                @Html.EditorFor(model => model.Available_time)
+                @Html.DisplayNameFor(model => model.Available_time)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Rating)
@@ -73,11 +73,17 @@
         }
     </tbody>
 </table>
-<script>
-    $(document).ready(function () {
-        $(".table").DataTable();
-    });
-</script>
+@section Scripts {
+    
+    <script>
+        $(document).ready(function () {
+            $(".table").DataTable();
+        });
+    </script>
+
+}
+
+
 
 
 
