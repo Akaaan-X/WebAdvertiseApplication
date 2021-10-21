@@ -6,13 +6,13 @@
 
 }
 
-<h2>Index</h2>
+<h2>Consultant List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <thread>
+    <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -37,7 +37,7 @@
             </th>
             <th></th>
         </tr>
-    </thread>
+    </thead>
 
     <tbody>
         @foreach (var item in Model)
