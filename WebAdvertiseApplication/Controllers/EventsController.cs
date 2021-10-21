@@ -36,6 +36,7 @@ namespace WebAdvertiseApplication.Controllers
         }
 
         // GET: Events/Create
+        [Authorize(Roles = "Client")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +60,7 @@ namespace WebAdvertiseApplication.Controllers
         }
 
         // GET: Events/Edit/5
+        [Authorize(Roles = "Client")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +80,7 @@ namespace WebAdvertiseApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Client")]
         public ActionResult Edit([Bind(Include = "Id,Title,Start")] Events events)
         {
             if (ModelState.IsValid)
@@ -90,6 +93,7 @@ namespace WebAdvertiseApplication.Controllers
         }
 
         // GET: Events/Delete/5
+        [Authorize(Roles = "Client")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +111,7 @@ namespace WebAdvertiseApplication.Controllers
         // POST: Events/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Client")]
         public ActionResult DeleteConfirmed(int id)
         {
             Events events = db.Events.Find(id);
